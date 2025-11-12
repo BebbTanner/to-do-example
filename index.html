@@ -32,9 +32,9 @@
 
         <script>
             
+            //This creates the close button...allegedly
             var myNodeList = document.getElementsByTagName("LI");
             var i;
-
             for(i = 0; i < myNodeList.length; i++){
                 var span = document.createElement("SPAN");
                 var txt = document.createTextNode("/u00D7");
@@ -42,6 +42,20 @@
                 span.appendChild(txt);
                 myNodeList[i].appendChild(span);
             }
+
+            //Click on a close button to hide the current list item allegedly.
+            var close = document.getElementsByClassName("close");
+            var i;
+            for(i = 0; i < close.length; i++){
+                
+                close[i].onclick = function(){
+                    var div = this.parentElement;
+                    div.style.display = "none";
+                }
+
+            }
+
+            //Adds a checked symbol allegedly.
 
         </script>
 
